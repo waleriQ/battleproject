@@ -72,7 +72,7 @@ body {
   flex-direction: column; //каждый новый элемент в блоке с новой строки, занимать всю ширину экрана
   justify-content: center; //выравнивание ячейки по центру блока intro по вертикали
   padding-top: 100px; // отступает от шапки так-как наш intro на весь кэран на всю область
-  height: 750px;
+  height: 790px;
   background: #3C43AA url(/img/fon.jpg) center no-repeat; // цвет в начале если картинка не прогрузится, то будет виден похожий цвет
   background-size: cover;
 }
@@ -107,7 +107,7 @@ vertical-align: top; // выравнивание по вертикальной �
 font-size: 13px;
 color: #fff;
 font-weight: 600;
-cursor: sw-resize;
+cursor: pointer;
 text-transform: uppercase;
 text-decoration: none;
 padding: 14px 40px;
