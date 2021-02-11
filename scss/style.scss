@@ -1,0 +1,125 @@
+// <БЛОК ABOUT>==========================================================================
+
+//<МИКСИНЫ>==========================================================================
+
+// Файл обнуляющих стилей
+@import "_nullstyle.scss";
+
+//<ШРИФТЫ>==========================================================================
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Potta+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&family=Raleway:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Potta+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Potta+One&family=Raleway&display=swap');
+
+//<ШРИФТ ПО УМОЛЧАНИЮ>==========================================================================
+
+body {
+  font-family: 'Raleway', sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+.container {
+  width: 100%; // нужно для адаптивной верстки
+  max-width: 1170px;
+  margin: 0 auto; 
+}
+
+// !HEADER HERE
+.header {
+  height: 100px;
+  width: 100%;
+  position: absolute; //чтобы карнками смогла наехатать на header а не было под ним
+  top: 0px;
+  left: 0px;
+  z-index: 10; //на всякий случай вдруг, поверх картинки начнут закидывать
+
+		&__inner {
+      display: flex;
+      justify-content: space-between;
+      padding: 38px 38px;
+      border-bottom: 1px solid #515369;
+      align-items: center; //логотип и навигация выровнялись по одной горизонтальной линии, без этого фотка была чуть выше
+		}
+
+		&__logo {
+		}
+}
+.nav {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+ 
+  
+  
+		&__link {
+      
+      color: #fff;
+      text-decoration: none;
+      opacity: 0.75;
+      transition: opacity .3s //плавный переход oppacity из .75 в 1s
+      linear;
+      margin-left: 50px;
+		}
+    &__link:nth-child(1) {
+      margin-left: 0px;
+    }
+    &__link:hover {
+      opacity: 1;
+    }
+}
+//! INTRO HERE
+.intro {
+  display: flex; //
+  flex-direction: column; //каждый новый элемент в блоке с новой строки, занимать всю ширину экрана
+  justify-content: center; //выравнивание ячейки по центру блока intro по вертикали
+  padding-top: 100px; // отступает от шапки так-как наш intro на весь кэран на всю область
+  height: 750px;
+  background: #3C43AA url(/img/fon.jpg) center no-repeat; // цвет в начале если картинка не прогрузится, то будет виден похожий цвет
+  background-size: cover;
+}
+.intro_inner { //! Мы ограничили блок по ширине внутри контейнера, чтобы не убежал родной
+  max-width: 970px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.intro__title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 65px;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 25px ;
+}
+.intro__subtitle {
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: normal;
+  margin-bottom: 60px;
+  
+}
+//!BUTTON HERE
+.btn {
+display: inline-block; // чтобы мы могли задавать padding и размеры
+vertical-align: top; // выравнивание по вертикальной границе, у нас по верху
+font-size: 13px;
+color: #fff;
+font-weight: 600;
+cursor: sw-resize;
+text-transform: uppercase;
+text-decoration: none;
+padding: 14px 40px;
+font-family: inherit; // используем шрифт родителя
+border: 0; //убираем границу по контуру кнопки, маленькая еле заметная
+transition: background .2s //кнопка в 0,2 секунды меняет цвет быстро и плавно
+linear; // линейная функция 
+}
+.btn--red {
+  background-color: #D73737;
+  border-radius: 2px;
+}
+.btn--red:hover {
+  background-color: #DC2828;
+}
